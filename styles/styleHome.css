@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0 ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+header{ 
+    position: fixed;
+    width: 100%;
+    height: 4rem;
+    top:0;
+    align-items: center;
+
+    background: rgb(240, 240, 240);
+    border: 1px solid lightgrey;  
+}
+#divHeader{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin: 0 8%;
+}
+
+#sectionHeader{
+    
+}
+.spanHeader{
+    color: #652a7e;
+    font-size: 18px;
+    padding: 2px 20px 2px 20px;
+}
+.spanHeader:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color:#441e55;
+}
+main{
+    margin-top: 3rem;
+}
+body{
+    background-image: linear-gradient(160deg,#743191,#652a7e);
+}
+h1{
+    padding-top: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+#divForm{
+    margin: 50px auto;
+    width: 500px;
+    padding: 1.5rem;
+    text-align: center;
+    background: #fff;  
+    border: 1px solid transparent;
+    border-radius: 20px; 
+}
+
+form{
+    width: 16rem;
+    margin: .8rem auto;
+}
+input[type=text], select{
+    margin: .8rem 0;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom:1px solid lightgray;
+   
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+    color:rgb(95, 95, 95) ;
+    
+}
+
+.controllButton{
+    width: 100%;
+    padding: 8px;
+    margin: 20px 10px 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background: rgb(223, 219, 219);
+    color:rgb(95, 95, 95);
+    font-weight: 600;
+}
+.controllButton:hover:enabled {
+    cursor: pointer;
+    background: #712f8d;
+    color: #fff;
+    font-weight: 700;
+}
+.controllButton:disabled{
+    color: rgb(177, 175, 175);
+    background:rgb(236, 235, 235); ;
+}
+
+span{
+  font-size: 26px;
+  font-weight: 500;
+  font-family: sans-serif;
+  color: rgb(83, 83, 83);
+}
+.textRequired{
+    font-size: 11px;
+    color: red;
+}
+h2{
+    margin: 0 1rem 2rem 1em;
+    text-align: center;
+    color:#fff;
+    padding: 10px;
+    border-top: 1px solid rgb(153, 151, 151);
+    border-bottom:  1px solid rgb(153, 151, 151);
+    
+}
+table{
+    margin:auto ;
+    text-align: center;
+    width: 95%;
+}
+th,td{
+    border: 1px solid rgb(31, 30, 30);
+    border-radius: 10px;
+}
+th{
+    padding: 10px;
+    background: #272333;
+    color:#fff;
+}
+td{
+   
+    padding: 5px;
+    background: #f1f5ca;
+}
+footer{
+    margin-top: 5rem;
+}

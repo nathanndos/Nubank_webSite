@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>NuBank</title>
+</head>
+<link href="/styles/styleHome.css" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="/scripts/script.js"></script>
+
+<body>
+    <header>
+        <div id="divHeader">
+        <img src="images/logo-nubank-roxo-1024.png" width="100px" height="90px" style="margin-right: 3rem;"/>
+        <span style="
+        font-size: 18px;
+        color: rgb(182, 179, 179);
+        margin-right: auto;
+        border-left: 2px solid lightgrey;
+        padding: 2px 0 2px 20px;"> O melhor do Brasil para você</span>
+        <section id="sectionHeader">
+            <span class="spanHeader" style="border-left: 2px solid lightgrey;padding-left: 50px;">Login</span>
+            <span class="spanHeader">Sign-in</span>
+        </section> 
+        </div>
+    </header>
+
+    <main ng-app="appMain" ng-controller="controllerMain">
+        <h1>Seja Bem vindo a Nubank</h1>
+        <div id="divForm">
+            <span>Cadastro Novo cliente</span><br>
+            <form name="formRegister">
+
+                <input 
+                    type="text" ng-model="cliente.numConta" placeholder=" Numero Conta" 
+                    ng-required="true" name="textNumConta" ng-minlength="5" ng-maxlength="5" >
+
+                    <p ng-show="formRegister.textNumConta.$error.required&&formRegister.textNumConta.$touched" class="textRequired">
+                        *Campo [nº Conta] obrigatório
+                    </p>
+                    <p ng-show="formRegister.textNumConta.$error.minlength" class="textRequired">
+                        *Quantidade mínima de caracteres [5]
+                    </p>
+                    <p ng-show="formRegister.textNumConta.$error.maxlength" class="textRequired">
+                        *Quantidade máxima de caracteres [5]
+                    </p>
+                <br><!--Finish numero conta-->
+
+                <select ng-model="cliente.numAgencia" ng-options="agc for agc in agencia" 
+                    ng-required="true" name="selectAgencia" >
+                        <option value="">Selecione Agência</option>
+                    </select>
+                    <p ng-show="formRegister.selectAgencia.$error.required&&formRegister.selectAgencia.$touched" 
+                    class="textRequired">
+                        *Campo obrigatório [agência]
+                    </p>
+                <br><!--Finish agencia-->
+               
+
+                <input type="text" ng-model="cliente.nome" placeholder="Nome" ng-required="true"
+                name="textNome" ng-minlength="3">
+                    <p ng-show="formRegister.textNome.$error.required&&formRegister.textNome.$touched" 
+                    class="textRequired">
+                        *Campo obrigatório [nome]
+                    </p>
+                    <p ng-show="formRegister.textNome.$error.minlength" class="textRequired">
+                        *Mínimo de caracteres [3]
+                    </p>
+                <br><!--Finish nome-->
+                
+                <select ng-model="cliente.tipoDeConta" ng-options="tipo for tipo in tipoConta"
+                    name="selectConta" ng-required="true">
+                    <option value="">Tipo da Conta</option>
+                </select>
+                    <p ng-show="formRegister.selectConta.$error.required&&formRegister.selectConta.$touched" class="textRequired">
+                        *Campo obrigatório [tipoConta]
+                    </p>
+                <br><!--Finish tipo conta-->
+
+                <input type="text" ng-model="cliente.saldo" placeholder="Saldo" ng-required="true"
+                    name="textSaldo">
+                    <p ng-show="formRegister.textSaldo.$error.required&&formRegister.textSaldo.$touched" class="textRequired">
+                        *Campo obrigatório [saldo] 
+                    </p>
+                <br><!--Finish saldo-->
+        
+                <input type="button" ng-disabled="formRegister.$invalid" ng-click="confirmarCadastro(cliente)"
+                class="controllButton" value="Cadastrar"/>
+                <br>
+                <input type="button" ng-click="limparDados()" class="controllButton" value="Limpar Dados"/>
+
+            </form>
+        </div>
+        <div id="divTable">
+            <h2>Clientes cadastrados</h2>
+            <table>
+                <tr>
+                    <th>Conta</th>
+                    <th>Agência</th>
+                    <th>Nome</th>
+                    <th>Tipo Conta</th>
+                    <th>Saldo</th>
+                    <th>Criado em</th>
+                </tr>
+                <tr ng-repeat="cliente in clientes">
+                    <td>{{cliente.numConta}}</td>
+                    <td>{{cliente.numAgencia}}</td>
+                    <td>{{cliente.nome}}</td>
+                    <td>{{cliente.tipoDeConta}}</td>
+                    <td>{{cliente.saldo | currency: 'R$ '}}</td>
+                    <td>{{cliente.criadoEm}}</td>
+                </tr>
+            </table>
+        </div>      
+    </main>
+
+
+</body>
+<footer>
+</footer>
+</html>
