@@ -56,4 +56,8 @@ app.controller('controllerMain',function($scope){
             }
         }
     }
+    $scope.orderFor = function(_typeOrder){
+        $scope.typeOrder = _typeOrder
+        $scope.order = !$scope.order
+    }
 })
