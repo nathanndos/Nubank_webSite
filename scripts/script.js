@@ -41,10 +41,19 @@ app.controller('controllerMain',function($scope){
     $scope.confirmarCadastro = function(cliente){
         cliente.criadoEm = new Date();
         $scope.clientes.push(angular.copy(cliente))
-        delete $scope.cliente
+        limparDados();
     }
 
     $scope.limparDados = function(){
         delete $scope.cliente
+        $scope.formRegister.$setUntouched();
+        $scope.formRegister.$setPristine();
+    }
+    $scope.deleteClient = function(cliente, clientes){
+        for(var i = 0; i < clientes.length; i++){
+            if(clientes[i].numConta == cliente.numConta){
+                clientes = clientes.splice(i,1)
+            }
+        }
     }
 })
