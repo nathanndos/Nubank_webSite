@@ -87,7 +87,7 @@
                 <input type="button" ng-disabled="formRegister.$invalid" ng-click="confirmarCadastro(cliente)"
                 class="controllButton" value="Cadastrar"/>
                 <br>
-                <input type="button" ng-click="limparDados()" class="controllButton" value="Limpar Dados"/>
+                <input type="button" ng-hide="formRegister.$pristine&&formRegister.$touched" ng-click="limparDados()" class="controllButton" value="Limpar Dados"/>
 
             </form>
         </div>
@@ -95,20 +95,23 @@
             <h2>Clientes cadastrados</h2>
             <table>
                 <tr>
-                    <th>Conta</th>
-                    <th>Agência</th>
-                    <th>Nome</th>
-                    <th>Tipo Conta</th>
-                    <th>Saldo</th>
-                    <th>Criado em</th>
+                    <th><a ng-click="orderFor('numConta')">Conta</a></th>
+                    <th><a ng-click="orderFor('numAgencia')">Agência</a></th>
+                    <th><a ng-click="orderFor('nome')">Nome</a></th>
+                    <th><a ng-click="orderFor('tipoDeConta')"Tipo Conta</a></th>
+                    <th><a ng-click="orderFor('saldo')">Saldo</a></th>
+                    <th><a ng-click="orderFor('criadoEm')"Criado em</a></th>
                 </tr>
-                <tr ng-repeat="cliente in clientes">
+                <tr ng-repeat="cliente in clientes|orderBy:typeOrder:order">
                     <td>{{cliente.numConta}}</td>
                     <td>{{cliente.numAgencia}}</td>
                     <td>{{cliente.nome}}</td>
                     <td>{{cliente.tipoDeConta}}</td>
                     <td>{{cliente.saldo | currency: 'R$ '}}</td>
-                    <td>{{cliente.criadoEm}}</td>
+                    <td>{{cliente.criadoEm | date: 'dd/MM/yyyy'}}</td>
+                    <td>
+                        <button ng-click="deletClient(cliente, clientes)">X</button>
+                    </td>
                 </tr>
             </table>
         </div>      
