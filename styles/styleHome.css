@@ -39,7 +39,7 @@ main{
     margin-top: 3rem;
 }
 body{
-    background-image: linear-gradient(160deg,#743191,#652a7e);
+   
 }
 h1{
     padding-top: 30px;
@@ -49,12 +49,29 @@ h1{
 #firstVision{
     display: flex;
     align-items: center;
-    margin: 7rem  5%;
+    padding:1rem  5% ;
+    height: 100vh; 
+    background-image: linear-gradient(160deg,#743191,#652a7e);
 }
 #textFirstVision{
     width: 47%;
+    margin: auto;
+    height: 10rem;
 }
 
+#secondVision{ 
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("secondVisionBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    text-align:start;
+}
+
+#textSecondVision{
+
+}
 #divForm{
     margin: 50px auto;
     width: 500px;
@@ -102,15 +119,9 @@ input[type=text], select{
 .controllButton:disabled{
     color: rgb(177, 175, 175);
     background:rgb(236, 235, 235); ;
-    cursor: no-drop;
+    cursor:no-drop;
 }
 
-span{
-  font-size: 26px;
-  font-weight: 500;
-  font-family: sans-serif;
-  color: rgb(83, 83, 83);
-}
 .textRequired{
     font-size: 11px;
     color: red;
