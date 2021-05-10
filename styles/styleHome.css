@@ -46,6 +46,14 @@ h1{
     color: #fff;
     text-align: center;
 }
+#firstVision{
+    display: flex;
+    align-items: center;
+    margin: 7rem  5%;
+}
+#textFirstVision{
+    width: 47%;
+}
 
 #divForm{
     margin: 50px auto;
@@ -94,6 +102,7 @@ input[type=text], select{
 .controllButton:disabled{
     color: rgb(177, 175, 175);
     background:rgb(236, 235, 235); ;
+    cursor: no-drop;
 }
 
 span{
@@ -129,11 +138,16 @@ th{
     background: #272333;
     color:#fff;
 }
+th:hover{
+    filter: brightness(90%);
+    cursor: pointer;
+}
 td{
    
     padding: 5px;
     background: #f1f5ca;
 }
+
 footer{
     margin-top: 5rem;
 }
