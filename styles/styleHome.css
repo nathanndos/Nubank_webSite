@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0 ;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: sans-serif,Verdana, Geneva, Tahoma;
     
 }
 header{ 
@@ -22,9 +22,6 @@ header{
     margin: 0 8%;
 }
 
-#sectionHeader{
-    
-}
 .spanHeader{
     color: #652a7e;
     font-size: 18px;
@@ -68,10 +65,28 @@ h1{
 
     text-align:start;
 }
+#thirdVision{
+    height: 100vh;
 
-#textSecondVision{
+    background-image: url('../images/débito-conta-PJ-Nubank-grid.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
 }
+
+#textThirdVision{
+    height: 80vh;
+    padding: 6%;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+   
+}
+
 #divForm{
     margin: 50px auto;
     width: 500px;
@@ -134,7 +149,7 @@ h2{
     border-top: 1px solid rgb(153, 151, 151);
     border-bottom:  1px solid rgb(153, 151, 151);
     
-}
+}/*
 table{
     margin:auto ;
     text-align: center;
@@ -157,8 +172,19 @@ td{
    
     padding: 5px;
     background: #f1f5ca;
+}*/
+table{
+    width: 100%;
+    text-align: center;
+    padding: 5%;
+   
 }
-
+li,th{
+    padding: 10px;
+}
+li{
+    list-style-type: none;
+}
 footer{
     margin-top: 5rem;
 }
