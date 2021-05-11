@@ -176,15 +176,27 @@ td{
 table{
     width: 100%;
     text-align: center;
-    padding: 5%;
+    padding: 5% 10rem;
+    font-size: 16px;
    
 }
 li,th{
     padding: 10px;
 }
+th,li{
+    text-align: start;
+}
 li{
     list-style-type: none;
+    font-weight: 600;
+}
+th{
+    font-weight: 500;
+    color: rgb(206, 206, 206);
 }
 footer{
-    margin-top: 5rem;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: rgb(15, 15, 15);
+    color: #fff;
 }
