@@ -174,11 +174,9 @@ td{
     background: #f1f5ca;
 }*/
 table{
+    padding: 4% ; 
     width: 100%;
     text-align: center;
-    padding: 5% 10rem;
-    font-size: 16px;
-   
 }
 li,th{
     padding: 10px;
@@ -190,13 +188,25 @@ li{
     list-style-type: none;
     font-weight: 600;
 }
+li:hover{
+    cursor: pointer;
+}
 th{
     font-weight: 500;
     color: rgb(206, 206, 206);
 }
+#finalSection{
+
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+
+}
+
 footer{
     height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background: rgb(15, 15, 15);
     color: #fff;
+    font-size: 18px;
 }
