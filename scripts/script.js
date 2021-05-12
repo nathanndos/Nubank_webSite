@@ -41,7 +41,7 @@ app.controller('controllerMain',function($scope){
     $scope.confirmarCadastro = function(cliente){
         cliente.criadoEm = new Date();
         $scope.clientes.push(angular.copy(cliente))
-        limparDados();
+        $scope.limparDados();
     }
 
     $scope.limparDados = function(){
